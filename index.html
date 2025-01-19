@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gra z Automatycznym Klikaczem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Licznik czasu -->
+    <div id="timer" class="top-right">Pozostały czas: 10:00</div>
+
+    <!-- Reszta gry -->
+    <div>
+        <h1> Moja pierwsza praca dyplomowa </h1>
+        <p id="word-counter">Słowa: 0/400</p>
+        <p id="page-counter">Kartki: 0</p>
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+        <button id="click-button">Kliknij!</button>
+        <select id="shop-menu">
+            <option value="">Wybierz ulepszenie</option>
+            <option value="auto-clicker">Automatyczny Klikacz (40 kartek)</option>
+            <option value="double-words">Podwójne Słowa (20 kartek)</option>
+            <option value="faster-clicks">Szybsze Klikanie (15 kartek)</option>
+        </select>
+        <button id="buy-button" disabled>Kup</button>
+        
+        
+    </div>
+    <div class="table-container">
+        <table>
+            <tr>
+                <td>
+                    <h3>Osiągnięcia</h3>
+                    <ul id="achievements-list"></ul>
+                </td>
+                <td>
+                    <h3>Wykupione umiejętności</h3>
+                    <ul id="purchased-skills-list"></ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Osadzenie pliku JS -->
+    <script src="script.js"></script>
+</body>
+</html>

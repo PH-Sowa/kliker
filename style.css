@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: url("assets/images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+    color: #000000;
+}
+
+.top-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#progress-bar-container {
+    width: 200px;
+    height: 20px;
+    border: 1px solid #000;
+    margin: 20px auto;
+    background-color: #ddd;
+    
+}
+
+#progress-bar {
+    height: 100%;
+    background-color: #4caf50;
+    width: 0%;
+    
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.1s ease, background-color 0.3s ease;
+}
+
+button:active {
+    transform: scale(0.95);
+    color: #5ec97e;
+}
+
+button:disabled {
+    background-color: #ee7272;
+    cursor: not-allowed;
+}
+
+#purchased-skills, #achievements {
+    margin-top: 30px;
+    font-size: 1.2rem;
+}
+#achievements {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    background-color: rgb(234, 202, 144, 0.4); /* Beżowy, lekko przezroczysty */
+    border-radius: 15px; /* Zaokrąglone rogi */
+    box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.5); /* Cień dla estetyki */
+    padding: 15px;
+}
+
+td {
+    vertical-align: top;
+    padding: 15px;
+    border: none;
+}
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0,0.9);
+}
+h3 {
+    margin-bottom: 10px;
+    text-align: center;
+    color: #000000; /* Lekki szary */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.achievement {
+    position: relative;
+    cursor: pointer;
+}
+
+.achievement:hover::after {
+    content: attr(data-tooltip); /* Wyświetla wartość atrybutu `data-tooltip` */
+    position: absolute;
+    top: -5px;
+    left: 110%; /* Wyświetla podpowiedź po prawej stronie osiągnięcia */
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 10;
+    font-size: 12px;
+    opacity: 1;
+}
+
+
+.achieved {
+    opacity: 1;
+    font-weight: bold;
+    color: green;
+}
+
+.flash {
+    animation: flash-animation 1s ease-in-out infinite alternate;
+}
+
+@keyframes flash-animation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
